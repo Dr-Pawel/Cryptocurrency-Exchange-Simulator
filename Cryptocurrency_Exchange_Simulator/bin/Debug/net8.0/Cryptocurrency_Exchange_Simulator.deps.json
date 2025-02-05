@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Cryptocurrency_Exchange_Simulator/1.0.0": {
+        "runtime": {
+          "Cryptocurrency_Exchange_Simulator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cryptocurrency_Exchange_Simulator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

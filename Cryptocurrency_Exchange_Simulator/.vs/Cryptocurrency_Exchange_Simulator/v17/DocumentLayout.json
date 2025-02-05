@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E5545118-6727-4C0A-920D-FD7322529EE5}|Cryptocurrency_Exchange_Simulator.csproj|e:\\programming\\c# projects\\cryptocurrency_exchange_simulator\\cryptocurrency_exchange_simulator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5545118-6727-4C0A-920D-FD7322529EE5}|Cryptocurrency_Exchange_Simulator.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5545118-6727-4C0A-920D-FD7322529EE5}|Cryptocurrency_Exchange_Simulator.csproj|e:\\programming\\c# projects\\cryptocurrency_exchange_simulator\\cryptocurrency_exchange_simulator\\market.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5545118-6727-4C0A-920D-FD7322529EE5}|Cryptocurrency_Exchange_Simulator.csproj|solutionrelative:market.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Programming\\C# projects\\Cryptocurrency_Exchange_Simulator\\Cryptocurrency_Exchange_Simulator\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Programming\\C# projects\\Cryptocurrency_Exchange_Simulator\\Cryptocurrency_Exchange_Simulator\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAywCsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T18:33:29.065Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,7 +49,7 @@
               "RelativeDocumentMoniker": "Portfolio.cs",
               "ToolTip": "E:\\Programming\\C# projects\\Cryptocurrency_Exchange_Simulator\\Cryptocurrency_Exchange_Simulator\\Portfolio.cs",
               "RelativeToolTip": "Portfolio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T20:20:16.989Z",
               "EditorCaption": ""
@@ -52,15 +69,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Programming\\C# projects\\Cryptocurrency_Exchange_Simulator\\Cryptocurrency_Exchange_Simulator\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Programming\\C# projects\\Cryptocurrency_Exchange_Simulator\\Cryptocurrency_Exchange_Simulator\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Market.cs",
+              "DocumentMoniker": "E:\\Programming\\C# projects\\Cryptocurrency_Exchange_Simulator\\Cryptocurrency_Exchange_Simulator\\Market.cs",
+              "RelativeDocumentMoniker": "Market.cs",
+              "ToolTip": "E:\\Programming\\C# projects\\Cryptocurrency_Exchange_Simulator\\Cryptocurrency_Exchange_Simulator\\Market.cs",
+              "RelativeToolTip": "Market.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T18:33:29.065Z",
+              "WhenOpened": "2025-02-05T14:06:54.239Z",
               "EditorCaption": ""
             }
           ]

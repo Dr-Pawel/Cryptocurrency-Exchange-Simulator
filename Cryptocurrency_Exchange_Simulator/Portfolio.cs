@@ -10,20 +10,21 @@ namespace Cryptocurrency_Exchange_Simulator
     {
         public decimal Balance { get; set; }
         Dictionary<string, decimal> Holdings = new Dictionary<string, decimal>();
-
         public Portfolio(decimal balance)
         {
             balance = 10000;
             Balance = balance;
-            Console.WriteLine($"Current balance: {Balance}$");
         }
 
-        public void BuyCrypto(string symbol, decimal amount, CryptoCurrency crypto)
+        public void BuyCrypto()
         {
-
+            Console.WriteLine("What kind of Crypto Currency would you like to buy?");
+            string cryptoToBuy = Console.ReadLine();
+            Console.WriteLine($"how much of {cryptoToBuy} would you like to buy?");
+            decimal amount = decimal.Parse(Console.ReadLine());          
         }
 
-        public void SellCrypto(string symbol, decimal amount, CryptoCurrency crypto)
+        public void SellCrypto()
         {
 
         }

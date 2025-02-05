@@ -1,0 +1,15 @@
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\bin\Debug\net8.0\Cryptocurrency_Exchange_Simulator.exe
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\bin\Debug\net8.0\Cryptocurrency_Exchange_Simulator.deps.json
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\bin\Debug\net8.0\Cryptocurrency_Exchange_Simulator.runtimeconfig.json
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\bin\Debug\net8.0\Cryptocurrency_Exchange_Simulator.dll
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\bin\Debug\net8.0\Cryptocurrency_Exchange_Simulator.pdb
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.AssemblyInfoInputs.cache
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.AssemblyInfo.cs
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.csproj.CoreCompileInputs.cache
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.sourcelink.json
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.dll
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\refint\Cryptocurrency_Exchange_Simulator.dll
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.pdb
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\Cryptocurrency_Exchange_Simulator.genruntimeconfig.cache
+E:\Programming\C# projects\Cryptocurrency_Exchange_Simulator\Cryptocurrency_Exchange_Simulator\obj\Debug\net8.0\ref\Cryptocurrency_Exchange_Simulator.dll
