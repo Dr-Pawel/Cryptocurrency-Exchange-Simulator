@@ -16,17 +16,70 @@ namespace Cryptocurrency_Exchange_Simulator
             Balance = balance;
         }
 
-        public void BuyCrypto()
+        public void BuyCrypto(Market market)
         {
             Console.WriteLine("What kind of Crypto Currency would you like to buy?");
-            string cryptoToBuy = Console.ReadLine();
+            string cryptoToBuy = Console.ReadLine().ToUpper();
+            CryptoCurrency crypto = market.GetCrypto(cryptoToBuy);
+            if(crypto == null)
+            {
+                Console.WriteLine($"Cryptocurrency not found");
+                return;
+            }
             Console.WriteLine($"how much of {cryptoToBuy} would you like to buy?");
-            decimal amount = decimal.Parse(Console.ReadLine());          
+            if(!decimal.TryParse(Console.ReadLine(), out decimal amount) || amount <= 0)
+            {
+                Console.WriteLine("invalid amount!");
+                return;
+            }
+            decimal totalCost = crypto.Price * amount;
+            if(Balance < totalCost)
+            {
+                Console.WriteLine("You dont have enough money!");
+                return;
+            }
+            Balance -= totalCost;
+
+            if(Holdings.ContainsKey(cryptoToBuy))
+            {
+                Holdings.Add(cryptoToBuy, amount);
+            }
+            Console.WriteLine($"You just bought {amount} of {cryptoToBuy} for {totalCost}");
+            Console.WriteLine($"Your current ballance is: {Balance}$");
         }
 
-        public void SellCrypto()
+        public void SellCrypto(Market market)
         {
+            Console.WriteLine("What kind of Crypto Currency would you like to sell?");
+            string cryptoToSell = Console.ReadLine().ToUpper();
+            CryptoCurrency crypto = market.GetCrypto(cryptoToSell);
+            if (crypto == null)
+            {
+                Console.WriteLine($"Cryptocurrency not found");
+                return;
+            }
+            Console.WriteLine($"How much of {cryptoToSell} woudl you like to sell");
+            if (!decimal.TryParse(Console.ReadLine(), out decimal amount) || amount <= 0)
+            {
+                Console.WriteLine("invalid amount!");
+                return;
+            }
+            if (!Holdings.ContainsKey(cryptoToSell) || Holdings[cryptoToSell] < amount) 
+            {
+                Console.WriteLine("You don't have enough of this cryptocurrency to sell!");
+                return;
+            }
+            decimal totalCost = crypto.Price * amount;
+            Balance += totalCost;
+            Holdings[cryptoToSell] -= amount;
 
+            if (Holdings[cryptoToSell] == 0)
+            {
+                Holdings.Remove(cryptoToSell);
+            }
+
+            Console.WriteLine($"You just sold {amount} of {cryptoToSell} for {totalCost}");
+            Console.WriteLine($"Your current ballance is: {Balance}$");
         }
         public void ShowPortfolio()
         {

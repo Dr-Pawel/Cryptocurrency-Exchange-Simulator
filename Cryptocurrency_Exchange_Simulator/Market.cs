@@ -24,7 +24,7 @@ namespace Cryptocurrency_Exchange_Simulator
             }
         }
 
-        public static CryptoCurrency GetCrypto(string symbol)
+        public CryptoCurrency GetCrypto(string symbol)
         {
            if(cryptoMarket.ContainsKey(symbol))
             {

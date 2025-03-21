@@ -44,10 +44,12 @@ namespace Cryptocurrency_Exchange_Simulator
                     ReturnToMainMenu();
                     break;
                 case "3":
-                    Console.WriteLine("3");
+                    portfolio.BuyCrypto(market);
+                    ReturnToMainMenu();
                     break;
                 case "4":
-                    Console.WriteLine("4");
+                    portfolio.SellCrypto(market);
+                    ReturnToMainMenu();
                     break;
                 case "5":
                     Console.WriteLine("5");

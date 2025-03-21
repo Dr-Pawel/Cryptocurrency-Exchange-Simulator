@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cryptocurrency_Exchange_Simulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+587fffb1ec554779c3c3df07b582ff3ec5167f57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+879c4d89d3228ff1129c5275f84bf83383db932c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cryptocurrency_Exchange_Simulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cryptocurrency_Exchange_Simulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
