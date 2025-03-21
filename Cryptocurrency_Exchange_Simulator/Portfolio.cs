@@ -40,7 +40,7 @@ namespace Cryptocurrency_Exchange_Simulator
             }
             Balance -= totalCost;
 
-            if(Holdings.ContainsKey(cryptoToBuy))
+            if(!Holdings.ContainsKey(cryptoToBuy))
             {
                 Holdings.Add(cryptoToBuy, amount);
             }
@@ -81,7 +81,7 @@ namespace Cryptocurrency_Exchange_Simulator
             Console.WriteLine($"You just sold {amount} of {cryptoToSell} for {totalCost}");
             Console.WriteLine($"Your current ballance is: {Balance}$");
         }
-        public void ShowPortfolio()
+        public void ShowPortfolio(Market market)
         {
             Console.WriteLine($"Current Ballance: {Balance}$");
 
@@ -91,10 +91,22 @@ namespace Cryptocurrency_Exchange_Simulator
             }
             else
             {
+                decimal totalPortfolioValue = 0;
                 foreach (var asset in Holdings)
                 {
-                    Console.WriteLine($"{asset.Key}: {asset.Value} units");
+                    CryptoCurrency crypto = market.GetCrypto(asset.Key);
+                    if (crypto != null)
+                    {
+                        decimal assetValue = asset.Value * crypto.Price;
+                        totalPortfolioValue += assetValue;
+                        Console.WriteLine($"{asset.Key}: {asset.Value} units - worth {Math.Round(assetValue, 2)}$");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{asset.Key}: {asset.Value} units - Market data unavailable");
+                    }
                 }
+                Console.WriteLine($"Total Portfolio Value: {Math.Round(totalPortfolioValue, 2)}$");
             }
         }
     }

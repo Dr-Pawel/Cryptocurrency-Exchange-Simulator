@@ -35,7 +35,7 @@ namespace Cryptocurrency_Exchange_Simulator
             {
                 case "1":
                     Console.Clear();
-                    portfolio.ShowPortfolio();
+                    portfolio.ShowPortfolio(market);
                     ReturnToMainMenu();
                     break;
                 case "2":
@@ -44,15 +44,21 @@ namespace Cryptocurrency_Exchange_Simulator
                     ReturnToMainMenu();
                     break;
                 case "3":
+                    Console.Clear();
+                    market.ShowMarket();
+                    Console.WriteLine("\n");
                     portfolio.BuyCrypto(market);
                     ReturnToMainMenu();
                     break;
                 case "4":
+                    Console.Clear();
+                    market.ShowMarket();
+                    Console.WriteLine("\n");
                     portfolio.SellCrypto(market);
                     ReturnToMainMenu();
                     break;
                 case "5":
-                    Console.WriteLine("5");
+                    System.Environment.Exit(1);
                     break;
                 default:
                     Console.WriteLine("Wrong input, try again");
