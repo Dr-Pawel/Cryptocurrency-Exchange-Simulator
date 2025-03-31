@@ -4,11 +4,21 @@ namespace Cryptocurrency_Exchange_Simulator
 {
     internal class Program
     {
-        static Portfolio portfolio = new Portfolio(10000);
+        static Portfolio portfolio;
         static Market market = new Market();
         static void Main(string[] args)
         {
-            MainMenu();
+            if (File.Exists("portfolio.json"))
+            {
+                portfolio = new Portfolio();  
+            }
+            else
+            {
+                portfolio = CreateNewPortfolio();
+                portfolio.SaveToFile();
+            }
+
+            MainMenu();        
         }
 
             static void MainMenu()
@@ -59,6 +69,7 @@ namespace Cryptocurrency_Exchange_Simulator
                     break;
                 case "5":
                     System.Environment.Exit(1);
+                    portfolio.SaveToFile();
                     break;
                 default:
                     Console.WriteLine("Wrong input, try again");
@@ -72,6 +83,18 @@ namespace Cryptocurrency_Exchange_Simulator
             Console.ReadKey();
             Console.Clear();
             MainMenu();
+        }
+        private static Portfolio CreateNewPortfolio()
+        {
+            Console.WriteLine("No save file found. Please enter your starting budget:");
+
+            decimal startingBalance;
+            while (!decimal.TryParse(Console.ReadLine(), out startingBalance) || startingBalance <= 0)
+            {
+                Console.WriteLine("Invalid input. Please enter a positive number:");
+            }
+
+            return new Portfolio(startingBalance);
         }
     }
 }

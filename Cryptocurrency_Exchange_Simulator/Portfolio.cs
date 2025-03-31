@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.IO;
 
 namespace Cryptocurrency_Exchange_Simulator
 {
@@ -10,10 +12,28 @@ namespace Cryptocurrency_Exchange_Simulator
     {
         public decimal Balance { get; set; }
         Dictionary<string, decimal> Holdings = new Dictionary<string, decimal>();
+
         public Portfolio(decimal balance)
         {
-            balance = 10000;
             Balance = balance;
+        }
+
+        public Portfolio()
+        {
+            if (File.Exists("portfolio.json"))
+            {
+                LoadFromFile();
+            }
+            else
+            {
+                Console.WriteLine("No save file found. Please enter your starting budget:");
+                decimal startingBalance;
+                while (!decimal.TryParse(Console.ReadLine(), out startingBalance) || startingBalance <= 0)
+                {
+                    Console.WriteLine("Invalid input. Please enter a positive number:");
+                }
+                Balance = startingBalance;
+            }
         }
 
         public void BuyCrypto(Market market)
@@ -107,6 +127,41 @@ namespace Cryptocurrency_Exchange_Simulator
                     }
                 }
                 Console.WriteLine($"Total Portfolio Value: {Math.Round(totalPortfolioValue, 2)}$");
+            }
+        }
+
+        public void SaveToFile()
+        {
+            PortfolioData portfolioData = new PortfolioData(Balance, Holdings);
+
+            string json = JsonSerializer.Serialize(portfolioData, new JsonSerializerOptions { WriteIndented = true });
+
+            File.WriteAllText("portfolio.json", json);
+            Console.WriteLine("Portfolio Saved!");
+        }
+
+        public void LoadFromFile()
+        {
+            if (File.Exists("portfolio.json"))
+            {
+                try
+                {
+                    string json = File.ReadAllText("portfolio.json");
+                    PortfolioData portfolioData = JsonSerializer.Deserialize<PortfolioData>(json);
+
+                    Balance = portfolioData.Balance;
+                    Holdings = portfolioData.Holdings ?? new Dictionary<string, decimal>();
+
+                    Console.WriteLine("Portfolio loaded!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error loading portfolio: {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No save file found, starting fresh.");
             }
         }
     }
